@@ -43,7 +43,7 @@ Request Format:
 			"elevation": number,
 			"measuredDateTime": "string in ISO8601 format",
 			"updatedDateTime": "string in ISO8601 format",
-			"accuracy": "The accuracy of the position"
+			"accuracy": number
 		},
 		"reqId": "string"
 	}
