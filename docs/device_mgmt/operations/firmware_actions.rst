@@ -208,11 +208,15 @@ Here some examples:
    Message:
    {
       "d" : {
-         "field" : "mgmt.firmware",
-         "value" : {
-            "state" : 1,
-            "updateStatus" : 0
-         }
+         "fields" : [
+            {
+               "field" : "mgmt.firmware",
+               "value" : {
+                  "state" : 1,
+                  "updateStatus" : 0
+               }
+            }
+         ]
       }
    }
    
@@ -226,11 +230,15 @@ Here some examples:
    Message:
    {
       "d" : {
-         "field" : "mgmt.firmware",
-         "value" : {
-            "state" : 2,
-            "updateStatus" : 0
-         }
+         "fields" : [
+            {
+               "field" : "mgmt.firmware",
+               "value" : {
+                  "state" : 2,
+                  "updateStatus" : 0
+               }
+            }
+         ]
       }
    }
  
