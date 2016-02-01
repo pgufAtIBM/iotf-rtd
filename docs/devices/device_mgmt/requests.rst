@@ -298,11 +298,12 @@ Here some examples:
    Message:
    {
       "d" : {
-         "field" : "mgmt.firmware",
-         "value" : {
-            "state" : 1,
-            "updateStatus" : 0
-         }
+         "fields" : [ {
+	         "field" : "mgmt.firmware",
+	         "value" : {
+	            "state" : 1
+	         }
+	  } ]
       }
    }
    
@@ -316,11 +317,12 @@ Here some examples:
    Message:
    {
       "d" : {
-         "field" : "mgmt.firmware",
-         "value" : {
-            "state" : 2,
-            "updateStatus" : 0
-         }
+         "fields" : [ {
+	         "field" : "mgmt.firmware",
+	         "value" : {
+	            "state" : 2
+	         }
+	  } ]
       }
    }
  
@@ -338,7 +340,7 @@ After a response with ``rc`` set to ``200`` was sent the firmware download is co
    {
       "reqId" : "d9ca3635-64d5-46e2-93ee-7d1b573fb20f",
       "d" : {
-         "data" : [{
+         "fields" : [{
                "field" : "mgmt.firmware"
             }
          ]
@@ -414,7 +416,9 @@ Here an example:
    {
       "reqId" : "909b477c-cd37-4bee-83fa-1d568664fbe8",
       "d" : {
-         "fields" : ["mgmt.firmware"]
+         "fields" : [ { 
+         	"field" : "mgmt.firmware"
+         }]
       }
    }
 
@@ -424,17 +428,7 @@ Here an example:
    Message:
    {
       "rc" : 200,
-      "reqId" : "909b477c-cd37-4bee-83fa-1d568664fbe8",
-      "d" : {
-         "fields" : [{
-               "field" : "mgmt.firmware",
-               "value" : {
-                  "state" : 0,
-                  "updateStatus" : 0
-               }
-            }
-         ]
-      }
+      "reqId" : "909b477c-cd37-4bee-83fa-1d568664fbe8"
    }
 
 |
@@ -478,11 +472,12 @@ Here an example notify message:
    Message:
    {
       "d" : {
-         "field" : "mgmt.firmware",
-         "value" : {
-            "state" : 0,
-            "updateStatus" : 0
-         }
+         "fields" : [{
+         	"field" : "mgmt.firmware",
+	         "value" : {
+	            "updateStatus" : 0
+	         }
+	}]
       }
    }
  
@@ -500,7 +495,7 @@ After a response with ``rc`` set to ``200`` was sent the firmware update request
    {
       "reqId" : "d9ca3635-64d5-46e2-93ee-7d1b573fb20f",
       "d" : {
-         "data" : [{
+         "fields" : [{
                "field" : "mgmt.firmware"
             }
          ]
